@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+
+
+
+<div class="w-full h-100  flex items-center justify-between p-2 mt-10">
+
+<div class="relative h-full w-80 border-2 border-gray-700 rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:border-4 hover:border-gray-100 shadow-lg hover:shadow-xl group   ml-10">
+  <!-- iPhone image -->
+  <img src="{{ url_for('static', filename='img/iphone17.png') }}" alt="iPhone" class="h-full w-full object-contain">
+
+  <!-- Mask overlay -->
+  <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-70 transition-opacity duration-300 pointer-events-none rounded-lg"></div>
+
+  <!-- Name & Price -->
+  <div class="absolute inset-0 flex flex-col justify-center items-center text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none px-2">
+    <h2 class="font-bold text-lg">iPhone 17</h2>
+    <p class="text-sm">$999</p>
+  </div>
+</div>
+
+<div class="relative h-full w-80 border-2 border-gray-700 rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:border-4 hover:border-gray-100 shadow-lg hover:shadow-xl group">
+  <!-- iPhone image -->
+  <img src="{{ url_for('static', filename='img/iphone17.png') }}" alt="iPhone" class="h-full w-full object-contain">
+
+  <!-- Mask overlay -->
+  <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-70 transition-opacity duration-300 pointer-events-none rounded-lg"></div>
+
+  <!-- Name & Price -->
+  <div class="absolute inset-0 flex flex-col justify-center items-center text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none px-2">
+    <h2 class="font-bold text-lg">iPhone 17</h2>
+    <p class="text-sm">$999</p>
+  </div>
+</div>
+
+
+
+<div class="relative h-full w-80 border-2 border-gray-700 rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:border-4 hover:border-gray-100 shadow-lg hover:shadow-xl group  mr-10">
+  <!-- iPhone image -->
+  <img src="{{ url_for('static', filename='img/iphone17.png') }}" alt="iPhone" class="h-full w-full object-contain">
+
+  <!-- Mask overlay -->
+  <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-70 transition-opacity duration-300 pointer-events-none rounded-lg"></div>
+
+  <!-- Name & Price -->
+  <div class="absolute inset-0 flex flex-col justify-center items-center text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none px-2">
+    <h2 class="font-bold text-lg">iPhone 17</h2>
+    <p class="text-sm">$999</p>
+  </div>
+</div>
+
+
+
+</div>
+
+
+{% endblock %}
