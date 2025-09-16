@@ -14,6 +14,17 @@ def explore():
             "description1": "Brighter display, now with ProMotion up to 120Hz. Durable Ceramic Shield 2 front with 3x better scratch resistance.","image1": "iphone17s1.png",
             "description2": "48MP Dual Fusion camera system. Superstunning shots up close and far away.","image2": "iphone17s2.png",
             "description3": "Apple Intelligence. Effortlessly helpful features — from image creation to Live Translation.3","image3": "iphone17s3.png",
+            "camera":"48MP Dual Fusion camera system", 
+           "chip":"A19 chip6‑core CPU with 2 performance and 4 efficiency cores 5‑core GPU with Neural Accelerators 16‑core Neural Engine Hardware-accelerated ray tracing", 
+           "video":"4K Dolby Vision video recording at 24 fps, 25 fps, 30 fps, or 60 fps",
+           "frontCam":"18MP Center Stage camera",
+           "powerBattery": "Up to 30 hours",
+           "memory": "256GB 8GB RAM, 512GB 8GB RAM",
+           "weight":"177g",
+           "height":"149.6mm",
+           "depth":"7.95mm",
+           "width":"71.5mm",
+
             
             
             }
@@ -23,6 +34,16 @@ def explore():
             "description1": "Super thin. Strikingly light. Shockingly strong.","image1": "iphone17Airs1.png",
             "description2": "A19 Pro chip and all‑day battery life.1 Pro within thin.","image2": "iphone17Airs2.png",
             "description3": "iOS 26. New look. Even more magic.","image3": "iphone17Airs3.png",
+             "camera":"48MP Dual Fusion camera system", 
+           "chip":"A19 chip6‑core CPU with 2 performance and 4 efficiency cores 5‑core GPU with Neural Accelerators 16‑core Neural Engine Hardware-accelerated ray tracing", 
+           "video":"4K Dolby Vision video recording at 24 fps, 25 fps, 30 fps, or 60 fps",
+           "frontCam":"18MP Center Stage camera",
+           "powerBattery": "Up to 30 hours",
+           "memory": "256GB 8GB RAM, 512GB 8GB RAM",
+           "weight":"165g",
+           "height":"156.22mm",
+           "depth":"5.64",
+           "width":"74.7mm",
             
             },
         3: {"id": "3","name": "iPhone 17 Pro", "price": "$1499", "image": "iphone17Pro.png",
@@ -30,6 +51,16 @@ def explore():
             "description1": "iOS 26. New look. Even more magic.","image1": "iphone17Pros1.png",
             "description2": "A19 Pro, vapor cooled for lightning‑fast performance. Breakthrough battery life.","image2": "iphone17Pros2.png",
             "description3": "Heat‑forged aluminum unibody design for exceptional pro capability.","image3": "iphone17Pros3.png",
+            "camera":"48MP Pro Fusion camera system", 
+           "chip":"A19 Pro chip 6‑core CPU with 2 performance and 4 efficiency cores 6‑core GPU with Neural Accelerators 16‑core Neural Engine Hardware‑accelerated ray tracing", 
+           "video":"4K Dolby Vision video recording at 24 fps, 25 fps, 30 fps, 60 fps, 100 fps (Fusion Main), or 120 fps (Fusion Main)",
+           "frontCam":"18MP Center Stage camera",
+           "powerBattery": "Up to 37 hours",
+           "memory": "256GB 12GB RAM, 512GB 12GB RAM, 1TB 12GB RAM",
+           "weight":"204g",
+           "height":"150.0mm",
+           "depth":"8.75",
+           "width":"71.9mm",
             
              
              },
@@ -182,7 +213,57 @@ def useCase():
 
 
 
+@app.route('/specs')
+def specs():
+    product_id= request.args.get('prodcut_id', type=int)
 
+    products={
+        1:{"name": "iPhone 17 ",
+           "camera":"48MP Dual Fusion camera system", 
+           "chip":"A19 chip6‑core CPU with 2 performance and 4 efficiency cores 5‑core GPU with Neural Accelerators 16‑core Neural Engine Hardware-accelerated ray tracing", 
+           "video":"4K Dolby Vision video recording at 24 fps, 25 fps, 30 fps, or 60 fps",
+           "frontCam":"18MP Center Stage camera",
+           "powerBattery": "Up to 30 hours",
+           "memory": "256GB 8GB RAM, 512GB 8GB RAM",
+           "weight":"177g",
+           "height":"149.6mm",
+           "depth":"7.95mm",
+           "width":"71.5mm",
+           
+           
+           
+           },
+        2:{"name": "iPhone 17 Air",
+           "camera":"48MP Dual Fusion camera system", 
+           "chip":"A19 chip6‑core CPU with 2 performance and 4 efficiency cores 5‑core GPU with Neural Accelerators 16‑core Neural Engine Hardware-accelerated ray tracing", 
+           "video":"4K Dolby Vision video recording at 24 fps, 25 fps, 30 fps, or 60 fps",
+           "frontCam":"18MP Center Stage camera",
+           "powerBattery": "Up to 30 hours",
+           "memory": "256GB 8GB RAM, 512GB 8GB RAM",
+           "weight":"165g",
+           "height":"156.22mm",
+           "depth":"5.64",
+           "width":"74.7mm",
+           
+           },
+
+
+        3:{"name": "iPhone 17 Pro",
+           "camera":"48MP Pro Fusion camera system", 
+           "chip":"A19 Pro chip 6‑core CPU with 2 performance and 4 efficiency cores 6‑core GPU with Neural Accelerators 16‑core Neural Engine Hardware‑accelerated ray tracing", 
+           "video":"4K Dolby Vision video recording at 24 fps, 25 fps, 30 fps, 60 fps, 100 fps (Fusion Main), or 120 fps (Fusion Main)",
+           "frontCam":"18MP Center Stage camera",
+           "powerBattery": "Up to 37 hours",
+           "memory": "256GB 12GB RAM, 512GB 12GB RAM, 1TB 12GB RAM",
+           "weight":"204g",
+           "height":"150.0mm",
+           "depth":"8.75",
+           "width":"71.9mm",
+           
+           },
+    }
+
+    return render_template('specs.html')
 
 
 

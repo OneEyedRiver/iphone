@@ -31,8 +31,13 @@
 
 
 
-      
-        <a href="{{ url_for('box', product_id=product.id) }}" class="bg-green-600 hover:bg-green-700 text-white font-semibold px-3 py-1 rounded transition-transform duration-200">In The Box</a>
+      <div class="flex justify-around ">
+        <a href="{{ url_for('box', product_id=product.id) }}" class="bg-green-600 hover:bg-green-700 text-white font-semibold px-3 py-1 rounded transition-transform duration-200 ml-3">In The Box</a>
+
+         </div>
+
+
+         
 
 
   <!-- Product Price -->
@@ -47,8 +52,49 @@
   </p>
   {% endif %}
 
- 
-<h class="font-semibold text-3xl mt-5">Highlights</h>
+ <div class="bg-gray-800 min-h-screen p-8 text-white">
+    <div class="max-w-4xl mx-auto bg-gray-900 rounded-xl shadow-lg p-6">
+        <!-- Product Title -->
+        <h1 class="text-3xl font-bold mb-6">{{ product.name }} Technical Specification</h1>
+
+        <!-- Specs Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 bg-gray-700 rounded-lg shadow">
+                <h2 class="text-lg font-semibold mb-2">Camera</h2>
+                <p>{{ product.camera }}</p>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg shadow">
+                <h2 class="text-lg font-semibold mb-2">Front Camera</h2>
+                <p>{{ product.frontCam }}</p>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg shadow">
+                <h2 class="text-lg font-semibold mb-2">Chip</h2>
+                <p>{{ product.chip }}</p>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg shadow">
+                <h2 class="text-lg font-semibold mb-2">Video</h2>
+                <p>{{ product.video }}</p>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg shadow">
+                <h2 class="text-lg font-semibold mb-2">Battery / Power</h2>
+                <p>{{ product.powerBattery }}</p>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg shadow">
+                <h2 class="text-lg font-semibold mb-2">Memory</h2>
+                <p>{{ product.memory }}</p>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg shadow">
+                <h2 class="text-lg font-semibold mb-2">Weight</h2>
+                <p>{{ product.weight }}</p>
+            </div>
+            <div class="p-4 bg-gray-700 rounded-lg shadow">
+                <h2 class="text-lg font-semibold mb-2">Dimensions (HxWxD)</h2>
+                <p>{{ product.height }} x {{ product.width }} x {{ product.depth }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<h class="font-semibold text-3xl mt-1">Highlights</h>
 
 
 
