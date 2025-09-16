@@ -1,9 +1,82 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<div class="text-white p-6">
+    <h2 class="text-3xl font-bold text-center mb-8">Phone Specs Comparison</h2>
 
-
-
-
-<h4>Specs</h4>
+    <div class="overflow-x-auto">
+        <table class="table-auto w-full border-collapse text-sm md:text-base">
+            <thead>
+                <tr class="bg-gray-700 text-gray-200">
+                    <th class="p-4 text-left">Specs</th>
+                    {% for id, product in products.items() %}
+                        <th class="p-4 text-center">{{ product.name }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-600">
+                <tr>
+                    <td class="p-4 font-semibold">Camera</td>
+                    {% for id, product in products.items() %}
+                        <td class="p-4">{{ product.camera }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td class="p-4 font-semibold">Chip</td>
+                    {% for id, product in products.items() %}
+                        <td class="p-4">{{ product.chip }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td class="p-4 font-semibold">Video</td>
+                    {% for id, product in products.items() %}
+                        <td class="p-4">{{ product.video }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td class="p-4 font-semibold">Front Camera</td>
+                    {% for id, product in products.items() %}
+                        <td class="p-4">{{ product.frontCam }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td class="p-4 font-semibold">Battery</td>
+                    {% for id, product in products.items() %}
+                        <td class="p-4">{{ product.powerBattery }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td class="p-4 font-semibold">Memory</td>
+                    {% for id, product in products.items() %}
+                        <td class="p-4">{{ product.memory }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td class="p-4 font-semibold">Weight</td>
+                    {% for id, product in products.items() %}
+                        <td class="p-4">{{ product.weight }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td class="p-4 font-semibold">Height</td>
+                    {% for id, product in products.items() %}
+                        <td class="p-4">{{ product.height }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td class="p-4 font-semibold">Depth</td>
+                    {% for id, product in products.items() %}
+                        <td class="p-4">{{ product.depth }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td class="p-4 font-semibold">Width</td>
+                    {% for id, product in products.items() %}
+                        <td class="p-4">{{ product.width }}</td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endblock %}
